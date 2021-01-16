@@ -12,7 +12,7 @@ Expected Output : {"statusCode":200,"message":"Ok"}
 
 ----------------------------------------------------------------------------------------------------
 
-URL: https://82y5ite0i3.execute-api.us-east-1.amazonaws.com/prod/api/shorten
+Path: https://82y5ite0i3.execute-api.us-east-1.amazonaws.com/prod/api/shorten
 
 Method : post
 
@@ -31,7 +31,7 @@ Expected Output: {
 
 ----------------------------------------------------------------------------------------------------
 
-URL: https://82y5ite0i3.execute-api.us-east-1.amazonaws.com/prod/api/<shortUrlReturned>
+Path: https://82y5ite0i3.execute-api.us-east-1.amazonaws.com/prod/api/<shortUrlReturned>
 
 Method : get
 
