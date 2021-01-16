@@ -5,6 +5,7 @@ A simple url shortner Api
 Single command deployment 
 
 URL:  https://82y5ite0i3.execute-api.us-east-1.amazonaws.com/prod/api
+
 Expected Output : {"statusCode":200,"message":"Ok"}
 
 URL: https://82y5ite0i3.execute-api.us-east-1.amazonaws.com/prod/api/shorten
