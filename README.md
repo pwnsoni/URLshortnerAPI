@@ -4,6 +4,12 @@ A simple url shortner Api
 ## Deployed on AWS lambda using serverless framework
 Single command deployment 
 
+## Tools Used
+### Express
+### MondoDB Atlas 
+### AWS lambda
+### Serverless
+
 ## Path
 
 URL:  https://82y5ite0i3.execute-api.us-east-1.amazonaws.com/prod/api
