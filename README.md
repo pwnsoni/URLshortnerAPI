@@ -5,10 +5,13 @@ A simple url shortner Api
 Single command deployment 
 
 ## Tools Used
-### Express
-### MondoDB Atlas 
-### AWS lambda
-### Serverless
+Express
+
+MondoDB Atlas 
+
+AWS lambda 
+
+Serverless
 
 ## Path
 
