@@ -12,32 +12,17 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// let connectToDB = async () => {
-//     const mongoose = require('mongoose');
-//     mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
-//     const db = mongoose.connection;
-//     db.on('error', console.error.bind(console, 'connection error:'));
-//     db.once('open', function() {
-//     // we're connected!
-//     });
-// }
-
-app.get('/', (req, res) => {
-    res.json({statusCode: 200, message:'OK'})
+app.get('/api', (req, res) => {
+    res.json({statusCode: 200, message:'Ok'})
 })
 
-app.post('/shorten', async (req, res) => {
-    let originalUri = req.body.url;
+app.post('/api/shorten', async (req, res) => {
     await shortenUrl(req, res);
 })
 
-app.get('/:shortenedUrl', async (req, res) => {
-    // widenUrl(req.params.shortenedUrl);  
+app.get('/api/:shortenedUrl', async (req, res) => {
     await widenUrl(req, res);
 })
 
-app.listen(3000, () => {
-    console.log('listening on 3000')
-})
 
 module.exports.handler = serverless(app);

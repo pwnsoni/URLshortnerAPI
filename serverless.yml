@@ -1,10 +1,11 @@
-service: URl-shortner-app
+service: url-shortner-API
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: dev
+  stage: prod
   region: us-east-1
   memorySize: 128
+  
 functions:
   app:
     handler: app/app.handler
@@ -17,3 +18,14 @@ functions:
           path: /{proxy+}
           method: ANY
           cors: true
+
+plugins:
+  - serverless-domain-manager
+
+custom:
+  customDomain:
+    domainName: 'supplychain.cf'
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
+    certificateName: 'supplychain.cf'

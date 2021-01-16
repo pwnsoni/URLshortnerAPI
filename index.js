@@ -22,17 +22,17 @@ app.use(bodyParser.json());
 //     });
 // }
 
-app.get('/', (req, res) => {
-    res.json({statusCode: 200, message:'OK'})
-})
+// app.get('/', (req, res) => {
+//     res.json({statusCode: 200, message:'OK'})
+// })
 
-app.post('/shorten', async (req, res) => {
-    let originalUri = req.body.url;
+app.use('/', express.static('../ssr_testing/dist'))
+
+app.post('/api/shorten', async (req, res) => {
     await shortenUrl(req, res);
 })
 
-app.get('/:shortenedUrl', async (req, res) => {
-    // widenUrl(req.params.shortenedUrl);  
+app.get('/api/:shortenedUrl', async (req, res) => {
     await widenUrl(req, res);
 })
 
